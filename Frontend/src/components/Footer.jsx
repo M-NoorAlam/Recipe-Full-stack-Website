@@ -2,11 +2,25 @@ import React from 'react'
 import FB from '../assets/fb.png'
 import X from '../assets/x.png'
 import Insta from '../assets/insta.png'
+import { useNavigate } from 'react-router-dom'
 
 const Footer = () => {
+    const navigate = useNavigate()
+    const navigateHome = ()=>{
+        navigate('/home')
+    }
+    const navigateShareRecipes = ()=>{
+        navigate('/shareRecipes')
+    }
+    const navigateRecipes = ()=>{
+        navigate('/recipes')
+    }
+    const navigateContactUs = ()=>{
+        navigate('/contactUs')
+    }
     return (
         <div>
-            <div className="footer w-[100%] h-[100%] mt-4 p-4 bg-[#F1F1F1] grid grid-cols-3 gap-6 place-content-center place-items-center">
+            <div className="footer w-[100%] h-[100%] mt-4 p-4 bg-[#F1F1F1] grid grid-cols-1 sm:grid-cols-3 gap-6 place-content-center place-items-center">
 
                 <div className="webLogo">
                     <h1 className='font-rightcious text-[18px] sm:text-[27px] md:text-[32px] font-semibold text-black'>WEB LOGO</h1>
@@ -23,10 +37,10 @@ const Footer = () => {
                     <h1 className='font-rightcious text-[18px] sm:text-[24px] font-semibold text-black'>QUICK LINKS</h1>
                     <nav>
                         <ul className='flex flex-col font-inter sm:text-[15px] text-[11px]'>
-                            <li className='cursor-pointer hover:underline'>Home</li>
-                            <li className='cursor-pointer hover:underline'>Recipe</li>
-                            <li className='cursor-pointer hover:underline'>Share Recipe</li>
-                            <li className='cursor-pointer hover:underline'>Contact Us</li>
+                            <li className='cursor-pointer hover:underline'onClick={navigateHome}>Home</li>
+                            <li className='cursor-pointer hover:underline'onClick={navigateRecipes}>Recipe</li>
+                            <li className='cursor-pointer hover:underline'onClick={navigateShareRecipes}>Share Recipe</li>
+                            <li className='cursor-pointer hover:underline'onClick={navigateContactUs}>Contact Us</li>
                         </ul>
                     </nav>
                 </div>

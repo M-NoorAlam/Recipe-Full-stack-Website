@@ -6,6 +6,8 @@ import Home from "./Pages/Home";
 import Recipes from "./Pages/Recipes";
 import ShareRecipes from "./Pages/ShareRecipes";
 import ContactUs from "./Pages/ContactUs";
+import Recipe from './Pages/Recipe'
+import ShareRecipe from "./Pages/shareRecipe";
 function App() {
  
   return (
@@ -16,7 +18,9 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/home" element={<Home />} />
         <Route path="/recipes" element={<Recipes />} />
+        <Route path="/recipe" element={<Recipe />} />
         <Route path="/shareRecipes" element={<ShareRecipes />} />
+        <Route path="/shareRecipe" element={<ShareRecipe />} />
         <Route path="/contactUs" element={<ContactUs />} />
       </Routes>
     </Router>

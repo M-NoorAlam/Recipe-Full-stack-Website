@@ -44,7 +44,7 @@ const Navbar = () => {
           <nav>
             <ul className="sm:flex gap-x-6 font-inter font-semibold sm:text-[12px] md:text-[15px] hidden">
               <li
-                className={`cursor-pointer ${
+                className={`cursor-pointer hover:underline ${
                   isActive === 'home' ? 'text-[#DB8A89] underline' : ''
                 }`}
                 onClick={() => handleNavigation('home', '/home')}
@@ -52,7 +52,7 @@ const Navbar = () => {
                 Home
               </li>
               <li
-                className={`cursor-pointer ${
+                className={`cursor-pointer hover:underline ${
                   isActive === 'recipes' ? 'text-[#DB8A89] underline' : ''
                 }`}
                 onClick={() => handleNavigation('recipes', '/recipes')}
@@ -60,7 +60,7 @@ const Navbar = () => {
                 Recipes
               </li>
               <li
-                className={`cursor-pointer ${
+                className={`cursor-pointer hover:underline ${
                   isActive === 'shareRecipes' ? 'text-[#DB8A89] underline' : ''
                 }`}
                 onClick={() => handleNavigation('shareRecipes', '/shareRecipes')}
@@ -68,7 +68,7 @@ const Navbar = () => {
                 Share Recipe
               </li>
               <li
-                className={`cursor-pointer ${
+                className={`cursor-pointer hover:underline ${
                   isActive === 'contactUs' ? 'text-[#DB8A89] underline' : ''
                 }`}
                 onClick={() => handleNavigation('contactUs', '/contactUs')}
